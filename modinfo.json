@@ -1,0 +1,21 @@
+{
+  "defaults": {
+    "authors": "Neumatic",
+    "source": "https://github.com/Neumatic/bl-2-tps-sdk-mods",
+    "supports": ["BL2", "TPS", "AoDK"],
+    "issues": "https://github.com/Neumatic/bl-2-tps-sdk-mods/issues",
+    "license": "GNU GPLv3"
+  },
+  "mods": [
+    {
+      "name": "Upscaling Helper",
+      "description": "Change the in-game resolution to a lower or non-supported resolution for use with an upscaler.",
+      "types": ["Utility"],
+      "latest": "1.0",
+      "versions": {
+        "1.0": "https://github.com/Neumatic/bl-2-tps-sdk-mods/raw/main/UpscalingHelper/UpscalingHelper.zip"
+      },
+      "requirements": {}
+    }
+  ]
+}
