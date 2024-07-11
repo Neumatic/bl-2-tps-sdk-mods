@@ -48,7 +48,7 @@ class Resolution:
 class UpscalingHelper(ModMenu.SDKMod):
     Name = "Upscaling Helper"
     Author = "Neumatic"
-    Version = "1.0"
+    Version = "1.1"
     Description = (
         f"Change the in-game {font_color('resolution', Color.SKILL)} to a lower or non-supported"
         f" {font_color('resolution', Color.SKILL)} for use with an {font_color('upscaler', Color.SKILL)}."
@@ -69,8 +69,9 @@ class UpscalingHelper(ModMenu.SDKMod):
             Caption = "Resolution Scale",
             Description = (
                 f"The scaling size of the output {font_color('resolution', Color.SKILL)}.\n"
-                f"({font_color('Output Resolution', Color.SKILL)} {font_color('*', Color.HEALTH)}"
-                f" {font_color('Resolution Scale', Color.SKILL)}) {font_color('/', Color.HEALTH)} 100"
+                f"round{font_color('(', Color.HEALTH)}{font_color('Output Resolution', Color.SKILL)}"
+                f" {font_color('*', Color.HEALTH)} {font_color('Resolution Scale', Color.SKILL)}"
+                f" {font_color('/', Color.HEALTH)} 100{font_color(')', Color.HEALTH)}"
             ),
             StartingValue = 100,
             MinValue = 50,
@@ -95,8 +96,8 @@ class UpscalingHelper(ModMenu.SDKMod):
                 return
             res_x, res_y = Resolution.DATA[self.output_resolution_option.CurrentValue]
             res_scale: int = self.resolution_scale_option.CurrentValue
-            new_res_x = int((res_x * res_scale) / 100)
-            new_res_y = int((res_y * res_scale) / 100)
+            new_res_x = round(res_x * res_scale / 100)
+            new_res_y = round(res_y * res_scale / 100)
             if not DEBUG:
                 pc = get_pc()
                 pc.ConsoleCommand(f"SetRes {new_res_x}x{new_res_y}")

@@ -11,9 +11,10 @@
       "name": "Upscaling Helper",
       "description": "Change the in-game resolution to a lower or non-supported resolution for use with an upscaler.",
       "types": ["Utility"],
-      "latest": "1.0",
+      "latest": "1.1",
       "versions": {
-        "1.0": "https://github.com/Neumatic/bl-2-tps-sdk-mods/raw/main/UpscalingHelper/UpscalingHelper.zip"
+        "1.0": "https://github.com/Neumatic/bl-2-tps-sdk-mods/raw/e067a24eafab1ffeb995412d6176eb86cf11fb58/UpscalingHelper/UpscalingHelper.zip",
+        "1.1": "https://github.com/Neumatic/bl-2-tps-sdk-mods/raw/main/UpscalingHelper/UpscalingHelper.zip"
       },
       "requirements": {}
     }
